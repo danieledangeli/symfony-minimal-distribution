@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Dotenv\Dotenv;
 
 $dotenv = new Dotenv(__DIR__ . '/../');
-$dotenv->load();
+$dotenv->overload();
 
 $request = Request::createFromGlobals();
 $kernel = new AppKernel($_SERVER['SYMFONY_ENV'], (bool)$_SERVER['SYMFONY_DEBUG']);
